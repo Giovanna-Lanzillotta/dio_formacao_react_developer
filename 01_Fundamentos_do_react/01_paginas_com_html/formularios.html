@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formularios</title>
+</head>
+<body>
+        <h1 style="text-align: center; color:orchid;">FORMULÁRIOS</h1>
+
+        <form action="" method="get" style="background-color: aliceblue;">
+            <div>
+                <label for="noe">Nome:</label>
+                <br>
+                <input type="text" name="nome" id="nome">
+            </div>
+            <div>
+            <label for="email">Email:</label>
+            <br>
+            <input type="email" name="email" id="email">
+            </div>
+            <div>
+                <label for="data_nasciemto">Data de Nascimento:</label>
+                <br>
+                <input type="date" name="data_nascimento" id="data_nascimento">
+            </div>
+            <div>
+                <label for="sexo">Sexo:</label>
+                <br>
+                <select id="sexo" name="sexo">
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+                <option value="nao-dizer">Prefiro não dizer</option>
+                </select>
+            </div>
+            <div>
+                <label for="telefone">Telefone:</label>
+                <br>
+                <input type="tel" name="telefone" id="telefone">
+            </div>
+            <div>
+                <label for="transporte">Qual seu meio de transporte?</label>
+                <br>
+                <input type="radio" id="onibus" name="transporte" value="onibus">
+                <label for="onibus">ônibus</label><br>
+                <input type="radio" id="carro" name="transporte" value="carro" checked="checked">
+                <label for="carro">Carro</label><br>
+                <input type="radio" id="bicicleta" name="transporte" value="bicicleta">
+                <label for="bicicleta">Bicicleta</label>
+                <input type="radio" id="pe" name="transporte" value="pe">
+                <label for="pe">a pé</label>
+            </div>
+            <div>
+                <label for="linguagem">Qual(quais) linguagem(ns) você domina??</label>
+                <br>
+                <input type="checkbox" name="linguagem" value="html">
+                <label for="html">HTML</label><br>
+                <input type="checkbox" name="linguagem2" value="css">
+                <label for="linguagem2">CSS</label><br>
+                <input type="checkbox" name="linguagem3" value="javascript" checked>
+                <label for="linguagem3">JavaScript</label>
+            </div>
+            <div>
+                <label for="arquivo">Enviar documento:</label>
+                <br>
+                <input type="file" name="arquivo" id="arquivo">
+            </div>
+            <div>
+                <label for="msg">Mensagem:</label>
+                <br>
+                <textarea name="mensagem" id="msg"></textarea>
+            </div>
+            <div>
+                <div>
+                    <label for="cor">Cor favorita:</label>
+                    <input type="color" name="cor" id="cor">
+                </div>
+                <br>
+                <button type="submit">Enviar</button>
+                <br><br>
+                <input type="reset" value="Limpar">
+            </div>
+        </form>
+
+</body>
+</html>
