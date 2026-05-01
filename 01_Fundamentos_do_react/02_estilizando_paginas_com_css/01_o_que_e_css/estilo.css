@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+    background-color: cornsilk;
+}
+
+h1{
+    color: blueviolet;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+h3{
+    background-color: chartreuse;
+    color: darkblue;
+}
+
+ul{
+    list-style-type: inside;
+    text-align: center;
+}
+
+ul li:nth-of-type(1){ /*vai selecionar o primeiro elemento da ul que seja do tipo li */
+    color: red;
+}
+
+ul li:nth-child(3){ /* Vai selecionar o terceiro elemento da ul sem precisar ser de algum tipo */
+    color: blue;
+    background-color: lightskyblue;
+}
+
+ul li:last-of-type{
+    color: green;
+    font-size: 30px;
+}

@@ -1,0 +1,26 @@
+.container {
+            background-color: #ececec; /* Fundo cinza para ver a margem */
+            padding: 30px;
+            width: 500px;
+        }
+.caixa {
+     /* Tamanho do Conteúdo */
+            width: 300px;
+            height: auto;
+            background-color: lightblue; /* Cor do conteúdo */
+
+            /* Espaço Interno (Padding) */
+            padding: 40px; 
+
+            /* Borda */
+            border: 10px solid navy;
+
+            /* Espaço Externo (Margem) */
+            margin: 30px;
+
+            /* Linha extra para visualizar o limite da margem */
+            outline: 10px dashed red;
+
+            /* Comportamento do cálculo */
+            box-sizing: content-box; 
+        }

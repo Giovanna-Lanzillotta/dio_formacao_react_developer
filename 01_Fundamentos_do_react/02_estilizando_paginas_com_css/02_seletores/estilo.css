@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+h1{
+    color: blue;
+    background-color: yellow;
+}
+
+p{
+    color: red;
+    font-size: 20px;
+    font-style: italic;
+}
+
+dt{
+    color: purple;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 20px;
+}
+
+dd{
+    color: darkorchid;
+    background-color: lemonchiffon;
+}
+
+.tipo{
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#lua{
+    text-decoration: overline;
+}
+
+li{
+    margin-bottom: 15px;
+}
