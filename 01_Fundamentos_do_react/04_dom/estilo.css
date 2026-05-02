@@ -1,0 +1,23 @@
+body{
+    background-color: cornflowerblue;
+}
+
+
+.flex{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.item{
+    width: 100px;
+    height: 100px;
+    background-color: darkorchid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid red;
+}
