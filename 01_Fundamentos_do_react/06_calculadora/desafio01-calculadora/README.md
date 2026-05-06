@@ -7,25 +7,27 @@ Este projeto foi desenvolvido como parte do desafio da **Formação React Develo
 * **Styled Components**: Para a estilização dos botões, visor e layout.
 * **Hooks (useState)**: Para gerenciamento de estado dos números e operações.
 
-## 🛠️ Funcionalidades Calculador Normal
+## 🛠️ Funcionalidades Calculadora Normal
 - [x] Soma
 - [x] Subtração 
-- [x] Multiplicação (Em desenvolvimento)
+- [x] Multiplicação 
 - [x] Divisão 
 - [x] Limpar tela (C)
-- [ ] Raiz quadrada (Em desenvolvimento)
-- [ ] Potência (Em desenvolvimento)
 - [ ] Porcentagem (Em desenvolvimento)
 
-## 🛠️ Funcionalidades Calculador Científica
+
+## 🤖 Funcionalidades Calculadora Científica
 - [x] Soma
 - [x] Subtração 
-- [x] Multiplicação (Em desenvolvimento)
+- [x] Multiplicação 
 - [x] Divisão 
 - [x] Limpar tela (C)
-- [ ] Raiz quadrada (Em desenvolvimento)
-- [ ] Potência (Em desenvolvimento)
+- [x] Raiz quadrada 
+- [x] Potência
+- [x] PI 
+- [x] Euler
 - [ ] Porcentagem (Em desenvolvimento)
+- [ ] Apagar um número (Em desenvolvimento)
 
 
 ## 📋 Como executar o projeto
