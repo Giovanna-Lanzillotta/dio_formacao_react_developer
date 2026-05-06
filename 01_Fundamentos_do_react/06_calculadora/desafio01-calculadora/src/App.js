@@ -38,6 +38,21 @@ const App = () => {
     }
   }
 
+  // Função Subtração
+  const handleMinusNumbers = () => {
+
+    if(firstNumber === '0'){
+      setFirstNumber(String(currentNumber));
+      setCurrentNumber('0');
+      setOperation('-')
+    }else {
+      const sum = Number(firstNumber) - Number(currentNumber)
+      setCurrentNumber(String(sum))
+      setFirstNumber('0')
+      setOperation('')
+    }
+  }
+
 
   // Função do igual
   const handleEquals = () => {
@@ -45,6 +60,9 @@ const App = () => {
       switch(operation){
         case '+':
           handleSumNumbers();
+          break;
+           case '-':
+          handleMinusNumbers();
           break;
           default: 
           break;
@@ -67,7 +85,7 @@ const App = () => {
             <Button label="7" onClick={() => handleAddNumber('7')}/>
             <Button label="8" onClick={() => handleAddNumber('8')}/>
             <Button label="9" onClick={() => handleAddNumber('9')}/>
-            <Button label="-" />
+            <Button label="-" onClick={handleMinusNumbers}/>
           </Row>
           <Row>
             <Button label="4" onClick={() => handleAddNumber('4')}/>
