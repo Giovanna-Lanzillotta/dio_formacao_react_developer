@@ -2,6 +2,7 @@
   "name": "desafio01-calculadora",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Giovanna-Lanzillotta.github.io/dio_formacao_react_developer",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
