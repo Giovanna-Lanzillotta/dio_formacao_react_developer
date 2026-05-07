@@ -81,6 +81,17 @@ const App = () => {
     }
   }
 
+  // Função porcentagem
+   const handlePercent = () => {
+    if (firstNumber !== '0') {
+    const perc = (Number(firstNumber) * Number(currentNumber)) / 100;
+        setCurrentNumber(String(perc));
+    } else {
+        const perc = Number(currentNumber) / 100;
+        setCurrentNumber(String(perc));
+    }
+  }
+
 
   // Função do igual
   const handleEquals = () => {
@@ -107,6 +118,23 @@ const App = () => {
      
   }
   }
+
+  //Função para colocar vírgula
+  const handleAddDot = () => {
+    if (!currentNumber.includes('.')) {
+        setCurrentNumber(prev => `${prev}.`);
+    }
+};
+
+  // Função para apagar um número
+  const handleBackspace = () => {
+    setCurrentNumber(prev => {
+        if (prev.length <= 1) {
+            return '0';
+        }
+        return prev.slice(0, -1);
+    });
+};
 
   // Cálculos da calculadora científica
 
@@ -140,30 +168,80 @@ const App = () => {
     setCurrentNumber(String(raiz))
   }
 
+  // Função x ao quadrado
+  const handleSquare = () => {
+    const qua = Number(currentNumber) ** 2
+    setCurrentNumber(String(qua))
+  }
+
+  // Função do logaritmo na base 10
+  const handleLog = () => {
+    const log = Math.log10(Number(currentNumber))
+    setCurrentNumber(String(log))
+  }
+
+  // Função do logaritmo natural
+  const handleLg = () => {
+    const lg = Math.log(Number(currentNumber))
+    setCurrentNumber(String(lg))
+  }
+
+  // Função do fatorial
+  const handlefactorial = () => {
+    let n = Number(currentNumber);
+    if (n < 0) {
+        setCurrentNumber("ERRO!!! Não existe fatorial de número negativo"); 
+        return;
+    } 
+    let fact = 1;
+    for (let i = n; i > 1; i--) {
+        fact *= i;
+    }
+    setCurrentNumber(String(fact));
+};
+
+  // Função do inverso
+const handleReciprocal = () => {
+    const current = Number(currentNumber);
+    if (current === 0) {
+        setCurrentNumber("ERRO!!! Não é possível dividir por zero");
+        return;
+    }
+    const inv = 1 / current; 
+    setCurrentNumber(String(inv));
+};
+
+
+  // Função do exponencial de base 10
+    const handleExponentiation10 = () => {
+    const pot10 = 10 ** Number(currentNumber); 
+    setCurrentNumber(String(pot10));
+    setFirstNumber('0'); 
+};
+
   return (
     <Container>
       <Content>
         <Input value={currentNumber} /> 
-    {/* Botões de inverso, pi, euler, apagar e apagar tudo */}
+    
         <Row>
-          <ScientificButton  label="1/x" >1/x</ScientificButton>
+          <ScientificButton  label="1/x" onClick={handleReciprocal} >1/x</ScientificButton>
           <ScientificButton label="π" onClick={() => handlePi('π')}>π</ScientificButton>
           <ScientificButton label="e" onClick={() =>HandleEuler('e')}>e</ScientificButton>
           <Button label="c" onClick={handleOnClear}/>
-          <Button label="⌫"/>
+          <Button label="⌫" onClick={handleBackspace}/>
         </Row>
 
           <Row>
-          <ScientificButton  label="n!" >n!</ScientificButton>
+          <ScientificButton  label="n!" onClick={handlefactorial}>n!</ScientificButton>
           <ScientificButton label="xsqrt" onClick={() => handleSqrt('xsqrt')}>√</ScientificButton>
-          <ScientificButton label="x²">x²</ScientificButton>
-          <Button label="%"/>
+          <ScientificButton label="x²" onClick={() => handleSquare('x²')}>x²</ScientificButton>
+          <Button label="%" onClick={handlePercent}/>
           <Button label="=" onClick={handleEquals} gridSpan/>
-          
         </Row>
 
         <Row>
-            <ScientificButton label="10ˣ">10ˣ</ScientificButton>
+            <ScientificButton label="10ˣ" onClick={handleExponentiation10}>10ˣ</ScientificButton>
             <Button label="7" onClick={() => handleAddNumber('7')}/>
             <Button label="8" onClick={() => handleAddNumber('8')}/>
             <Button label="9" onClick={() => handleAddNumber('9')}/>
@@ -171,7 +249,7 @@ const App = () => {
           </Row>
 
             <Row>
-            <ScientificButton label="log">log</ScientificButton>
+            <ScientificButton label="log" onClick={() => handleLog('log')}>log</ScientificButton>
             <Button label="4" onClick={() => handleAddNumber('4')}/>
             <Button label="5" onClick={() => handleAddNumber('5')}/>
             <Button label="6" onClick={() => handleAddNumber('6')}/>
@@ -179,7 +257,7 @@ const App = () => {
           </Row>  
 
            <Row>  
-            <ScientificButton label="lg">lg</ScientificButton>
+            <ScientificButton label="lg" onClick={() => handleLg('lg')}>lg</ScientificButton>
             <Button label="1" onClick={() => handleAddNumber('1')}/>
             <Button label="2" onClick={() => handleAddNumber('2')}/>
             <Button label="3" onClick={() => handleAddNumber('3')}/>
@@ -188,7 +266,7 @@ const App = () => {
 
         <Row>
             <ScientificButton label="xʸ" onClick={() => handleExponentiation('π')}>xʸ</ScientificButton>
-            <Button label=","  onClick={handleSumNumbers}/>
+            <Button label=","  onClick={handleAddDot}/>
             <Button label="+/-"/>
             <Button label="0" onClick={() => handleAddNumber('0')}/>
             <Button label="/" onClick={handleDivNumbers}/>
