@@ -1,0 +1,16 @@
+# Indica que este é o arquivo de configuração raiz. 
+# O EditorConfig para de procurar outros arquivos em pastas superiores.
+root=true
+
+# Define o padrão de quebra de linha como 'LF' (padrão Unix/Linux/macOS). 
+# Isso evita problemas de compatibilidade quando pessoas usam sistemas diferentes (Windows vs Mac).
+end_of_line = lf
+
+# Garante que o arquivo sempre termine com uma linha em branco. 
+# É uma boa prática de programação que evita avisos em compiladores e facilita a leitura no terminal.
+insert_final_newline = true
+
+# Define o tamanho da indentação (o "espaço" do código) como 4 espaços.
+# Mantém o seu código sempre alinhado com o mesmo recuo.
+indent_size = 4
+

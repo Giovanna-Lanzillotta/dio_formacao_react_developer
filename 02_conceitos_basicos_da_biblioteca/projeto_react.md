@@ -1,6 +1,6 @@
-# Conceitos básicos da Biblioteca 
+# ⚛️ Conceitos básicos da Biblioteca 
 
-## Criando projetos React 
+## 🛠️ Criando projetos React 
 
 ### Babel
 Para iniciar o gerenciamento de pacotes neste projeto, você pode utilizar o Yarn ou o NPM.
@@ -24,6 +24,8 @@ yarn add @babel/core @babel/preset-env @babel/preset-react babel-loader -D
 
 ### Webpack
 
+O Webpack agrupa todos os arquivos (JS, CSS, Imagens) em um único pacote otimizado.
+
 1. Inicializar o projeto, digitando no terminal:
 ```bash
 yarn add html-loader html-webpack-plugin webpack webpack-cli webpack-dev-server style-loader css-loader 
@@ -42,9 +44,9 @@ yarn add react-dom -D
 1. Criar o diretorio `public` e dentro dele o arquivo `index.html`
 
 
-## Conceitos Fundamentais para React
+## 💡 Conceitos Fundamentais para React
 
-### JSX
+### JSX (JavaScript XML)
 - App.jsx
 ```jsx
 const App = () => {
@@ -148,5 +150,47 @@ const App = () => {
 export default App;
 ```
 
+🔹 Componentes: Classes vs. Funcionais
+Atualmente, a comunidade React prioriza Componentes Funcionais devido à simplicidade e ao uso de Hooks.
 
-### Ciclo de vida dos componentes
+| Tipo| Característica |
+| :--- | :---: |
+| Class Components | Utilizam `this.state` e métodos de ciclo de vida como `componentDidMount`. |
+| Functional Components | Utilizam Hooks (`useState`, `useEffect`) e são funções puras de JS. |
+
+
+
+## Criando projetos React 
+
+### Eslint
+
+Digite no terminal
+
+```bash
+npx eslint --init
+```
+
+- Instalar no terminal
+```bash
+yarn add eslint -D
+```
+
+
+### Prettier
+
+```JSON
+{
+    "semi": true,
+    "tabWidth": 4,
+    "printWidth": 100,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "jsxBracketSameLine" : true
+    
+}
+``` 
+
+
+### Editor Config
+
+- Criar na raiz um arquivo chamado `.editorconfig`
