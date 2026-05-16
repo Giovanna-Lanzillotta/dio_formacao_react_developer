@@ -4,13 +4,14 @@ import React from 'react'
 import { ItemContainer } from './styles'
 
 
- function ItemRepo() {
+ function ItemRepo({repo}) {
   return (
     <ItemContainer>
-        <h3>Giovanna</h3>
-        <p> Dio Giovanna</p>
+        <h3>{repo.name}</h3>
+        <p>{repo.full_name}</p>
+        <p>{repo.description}</p>
         {/* No react se usa className para nome de classe */}
-        <a href='#' >Ver repositório</a>
+        <a href={repo.html_url} rel="noreferrer" target='_blank'>Ver repositório</a>
         <br />
         <a href='#' className='remover'>Remover</a>
         <hr />
