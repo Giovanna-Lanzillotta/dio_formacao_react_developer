@@ -21,4 +21,3 @@ export const ButtonContainer = styled.button`
 `
 
 // https://api.github.com/users/Giovanna-Lanzillotta/repos
-// https://api.github.com/repos/Giovanna-Lanzillotta/dio_formacao_react_developer

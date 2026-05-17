@@ -39,14 +39,17 @@ function App() {
   }
 }
 }
-
+    const handleRemoveRepo = (id) => {
+      const UpdateRepo = repos.filter(repo  => repo.id !== id);
+      setRepos(UpdateRepo)
+    }
 
   return (
     <Container>
       <img src={gitLogo} with={72} height={72} alt='github logo'/>
       <Input value={curentRepo} onChange={(e) => setCurrentRepo(e.target.value)}/>
       <Button onClick={handleSearchRepo}/>
-      {repos.map(repo => <ItemRepo repo={repo} />)}
+      {repos.map(repo => <ItemRepo handleRemoveRepo={handleRemoveRepo} repo={repo} />)}
       
     </Container>
   );
