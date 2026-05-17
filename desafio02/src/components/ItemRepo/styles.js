@@ -15,10 +15,38 @@ export const ItemContainer = styled.div`
         color: #FAFAFA60;
         margin-bottom: 20px;
     }
+    
+    .links-contaiener {
+    display:flex;
+    flex-direction:row;
+    
+    
+    }
 
     a.remover {
-        color: #FF0000;
+        background-color: #transparent;;
+        color: #FFFFFF;
+        text-decoration: underline #ff5555;
         margin-top: 20px;
+        border-radius: 5px;
+
+                &:hover {
+      color: #ff3333; 
+}
+    }
+       
+
+        a.ver {
+        background-color: transparent;
+        color: #FFFFFF;
+        text-decoration: underline #4facfe;;
+        margin-top: 20px;
+        border-radius: 5px;
+        margin-right: 30px;
+
+        &:hover {
+      color: #319fff;
+    }
     }
 
     hr { 
