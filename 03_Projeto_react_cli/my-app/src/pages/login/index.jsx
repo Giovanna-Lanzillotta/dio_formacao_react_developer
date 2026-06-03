@@ -44,6 +44,8 @@ const Login = () => {
             if(data.length === 1){
                 navigate('/feed')
             }else {
+                console.log('DADOS DIGITADOS:', control?._formValues);
+                console.log('errors', errors);
                 alert('Email ou senha inválido')
             }
         }catch{
@@ -74,7 +76,7 @@ const Login = () => {
                     leftIcon={<MdEmail />} />
                      <Input 
                     name="password"
-                    errorMessage={errors?.password?.message}  
+                    errorMessage={errors?.senha?.message}  
                     control={control} 
                     type="password" 
                     placeholder="Senha" 
