@@ -15,7 +15,7 @@ const Input = ({leftIcon, name, control, errorMessage, ...rest}) => {
     name={name} // Nome único do campo (identificador no formulário)
         control={control} // Conecta este campo ao useForm principal do componente
         rules={{ required: true }} // Regra de validação: o preenchimento deste campo é obrigatório
-        render={({ field }) => <InputText {...field}  {...rest}/>} // Renderiza e passa o controle do React Hook Form para o seu input customizado
+        render={({ field }) => <InputText {...field}  {...rest} value={field.value || ''} />} // Renderiza e passa o controle do React Hook Form para o seu input customizado
      />
         
     </InputContainer>

@@ -15,6 +15,8 @@ import { Button } from '../../components/Button'
 import { Header } from '../../components/Header'
 import { Input } from '../../components/Input'
 
+
+import { api } from '../../services/api'
 import { Container, Title, Column, ErrorText, TitleLogin, SubtitleLogin, EsqueciText, CriarText, Row, Wrapper } from './styles';
 
 // Cria o "esquema" (schema) de validação, definindo as regras para cada campo do formulário
@@ -35,12 +37,19 @@ const Login = () => {
     });
 
     // Ação que acontece após o envio com sucesso
-    const onSubmit = data => console.log(data);
-
-
-    const handleClickSignIn = () => {
-        navigate('/feed')
-    }
+    const onSubmit = async formData => {
+        try{
+            const { data } = await api.get(`users?email=${formData.email}&senha=${formData.password}`);
+            console.log('retorno api',data)
+            if(data.length === 1){
+                navigate('/feed')
+            }else {
+                alert('Email ou senha inválido')
+            }
+        }catch{
+            alert('Houve um erro, tente novamente.')
+        }
+    };
 
     return (<>
     <Header /> 
@@ -63,7 +72,7 @@ const Login = () => {
                     control={control} 
                     placeholder="E-mail" 
                     leftIcon={<MdEmail />} />
-                    <Input 
+                     <Input 
                     name="password"
                     errorMessage={errors?.password?.message}  
                     control={control} 
