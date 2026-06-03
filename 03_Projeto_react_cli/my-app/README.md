@@ -11,6 +11,7 @@ O projeto foi construído utilizando as seguintes ferramentas e bibliotecas:
 * **Styled Components:** Utilizado para componentização do CSS, permitindo escopo isolado, passagem de props para o estilo (`variants`) e uso avançado de pseudo-elementos (`::after`, `::before`).
 * **React Icons (opcional):** Para os ícones da interface.
 * **Google Fonts ('Open Sans'):** Tipografia oficial da identidade visual.
+*  **React Hook Form** (Gerenciamento de performance e estado dos formulários)
 
 ---
 
