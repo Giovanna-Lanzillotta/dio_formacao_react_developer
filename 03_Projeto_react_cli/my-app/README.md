@@ -1,28 +1,47 @@
-# 💻 Desenvolvendo a Tela de Cadastro da Plataforma DIO com React
-Este projeto é uma réplica da interface principal da plataforma **DIO (Digital Innovation One)**, desenvolvido como parte de um desafio prático de desenvolvimento web. O foco principal foi a criação de componentes dinâmicos, reutilizáveis e estilizados de forma avançada utilizando o ecossistema do React.
+# 💻 Tela de Cadastro & Login - Clone da Plataforma DIO
+
+![GitHub repo size](https://img.shields.io/github/repo-size/Giovanna-Lanzillotta/dio_formacao_react_developer?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/Giovanna-Lanzillotta/dio_formacao_react_developer?style=for-the-badge)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361dafb)
+![Styled Components](https://img.shields.io/badge/styled--components-%23db7093.svg?style=for-the-badge&logo=styled-components&logoColor=white)
+
+> Desafio prático de desenvolvimento web desenvolvido como parte da **Formação React Developer** na [Digital Innovation One (DIO)](https://www.dio.me/).
+
+O projeto consiste na réplica das interfaces de Login, Cadastro e Feed da plataforma DIO, com foco na criação de componentes dinâmicos, reutilizáveis e estilizados de forma avançada no ecossistema do React.
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## 📸 Demonstração
 
-O projeto foi construído utilizando as seguintes ferramentas e bibliotecas:
-
-* **React.js:** Biblioteca JavaScript para construção de interfaces de usuário baseadas em componentes.
-* **Styled Components:** Utilizado para componentização do CSS, permitindo escopo isolado, passagem de props para o estilo (`variants`) e uso avançado de pseudo-elementos (`::after`, `::before`).
-* **React Icons (opcional):** Para os ícones da interface.
-* **Google Fonts ('Open Sans'):** Tipografia oficial da identidade visual.
-*  **React Hook Form** (Gerenciamento de performance e estado dos formulários)
+<p align="center">
+  <img src="./assets/preview-projeto.gif" alt="Demonstração do Projeto" width="100%">
+</p>
 
 ---
 
-## 🎨 Funcionalidades e Destaques Técnicos
+## 🚀 Tecnologias e Conceitos Utilizados
 
-* **Header Customizado:** Layout flexível utilizando CSS Flexbox, barra de busca responsiva e componentes de navegação com alinhamento preciso.
-* **Botões com Variantes dinâmicas:** Criação de botões customizáveis (`ButtonContainer`) que mudam de comportamento, bordas aplicadas via pseudo-elementos e cores dinâmicas baseadas na prop `variant` (ex: `variant="primary"`).
-* **Estrutura de Grid e Layout Limpa:** Separação de responsabilidades visuais em componentes reutilizáveis como `Container`, `Row`, `Column` e `Wrapper`.
+O ecossistema do projeto foi estruturado com ferramentas modernas do ecossistema JavaScript:
+
+* **React.js**: Biblioteca base para a construção de interfaces SPA baseadas em componentes.
+* **React Router DOM (v7)**: Gerenciamento robusto de rotas internas e navegação dinâmica (`useNavigate`).
+* **Styled Components**: Componentização do CSS com escopo isolado, passagem de `props` dinâmicas para o estilo (*variants*) e uso avançado de pseudo-elementos (`::after`, `::before`).
+* **React Hook Form**: Gerenciamento de performance, estado de formulários e captura otimizada de inputs.
+* **Axios**: Integração e requisições HTTP para consumo de API externa.
+* **JSON Server**: Simulação de uma API REST baseada em um arquivo local (`db.json`) para validação de autenticação em tempo real.
+* **React Icons & Google Fonts ('Open Sans')**: Identidade visual oficial da plataforma.
 
 ---
 
+## 🎨 Destaques Técnicos & Arquitetura
 
+* **Consumo Dinâmico de API**: Autenticação simulada ponta a ponta (Frontend ⇆ API Local), validando credenciais de usuários cadastrados diretamente na memória/JSON.
+* **Componentização Avançada**: Separação estruturada de responsabilidades visuais em componentes reutilizáveis como `Container`, `Row`, `Column`, `Wrapper`, `Input` e `Button`.
+* **Botões com Variantes Dinâmicas**: Criação de botões customizáveis (`ButtonContainer`) que alteram comportamento, bordas e cores de forma reativa baseados na prop `variant="primary|secondary"`.
+* **Layout Responsivo**: Uso estratégico de CSS Flexbox e Grid layouts para garantir o alinhamento preciso do cabeçalho, formulários e feed de notícias.
 
-📝 Este projeto foi desenvolvido estritamente para fins educacionais e práticos dentro do bootcamp da DIO.
+---
+
+## 🛠️ Como Executar o Projeto
+
+Para rodar este projeto localmente, você precisará ter o [Node.js](https://nodejs.org/) instalado em sua máquina.

@@ -1,8 +1,10 @@
-// Estilo Login
+// Cadastro estilo
 
 import styled from 'styled-components';
 
-export const Container = styled.main`
+export { Container, Wrapper, Column, Row, Title, TitleCadastro, SubtitleCadastro, TermosText, CriarText, FazerLoginText };
+
+const Container = styled.main`
     width: 100%;
     max-width: 80%;
     margin: 0 auto;
@@ -11,76 +13,89 @@ export const Container = styled.main`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 `
 
-export const Wrapper = styled.div`
-    max-width: 300px;
-`
-
-export const Column = styled.div`
+const Column = styled.div`
     flex: 1;
 `
 
-export const Row = styled.div`
+const Row = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    margin-top: 20px;
+    width: 100%;
 `
 
+const Wrapper = styled.div`
+    max-width: 380px;
+    margin-left: auto; /* Empurra o formulário para alinhar bem à direita */
+`
 
-
-export const Title = styled.h2`
+const Title = styled.h2`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    max-width: 90%;
-    margin-bottom: 20px;
+    max-width: 420px;
     line-height: 44px;
-
     color: #FFFFFF;
 `
 
-export const TitleLogin = styled.p`
+const TitleCadastro = styled.h2`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 44px;
     margin-bottom: 8px;
+    color: #FFFFFF;
 `
 
-export const SubtitleLogin = styled.p`
+const SubtitleCadastro = styled.p`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
     margin-bottom: 35px;
+    color: #FFFFFF;
 `
 
+const TermosText = styled.p`
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin-top: 25px;
+`
 
-export const EsqueciText  = styled.p`
+const CriarText = styled.p`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
+    color: #FFFFFF;
+`
 
-    color: #8a5fbb;
-` 
+export const ErrorText = styled.p`
+    color: #FF0000;
+    font-family: 'Open Sans';
+    font-size: 12px;
+    margin: 5px 0 10px 0;
+`
 
-export const CriarText =  styled.p`
+const FazerLoginText = styled.p`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
-
-    color: #e259d7;
+    color: #fa78ae; 
     margin-left: 5px;
     cursor: pointer;
 
