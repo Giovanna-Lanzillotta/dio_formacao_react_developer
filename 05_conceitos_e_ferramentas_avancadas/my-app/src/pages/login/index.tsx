@@ -42,7 +42,7 @@ const Login = () => {
 
     return (
     <>
-    <Header autenticado={false} /> 
+    <Header /> 
     <Container>
         <Column>
             <Title>

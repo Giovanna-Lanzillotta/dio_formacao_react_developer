@@ -1,6 +1,7 @@
 // estilo Feed
 
 import styled from 'styled-components';
+import { IColumn } from './types';
 
 export const Container = styled.main`
     width: 100%;
@@ -39,8 +40,3 @@ export const Column = styled.div<IColumn>`
     padding-right: 24px;
 
 `
-
-interface IColumn {
-  flex: number;
-}
-

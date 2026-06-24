@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled  from 'styled-components';
 
 export const Container = styled.div`
@@ -64,6 +65,7 @@ export const UserPicture = styled.img`
     height: 32px;
     border-radius: 22px;
     border: 3px solid #FFFFFF;
+    margin-right: 12px;
 `
 
 export const Input = styled.input`
@@ -72,3 +74,18 @@ export const Input = styled.input`
     border: 0;
     color: #FFFFFF;
 `
+
+export const BotaoSair = styled.button`
+  background: none;
+  border: none;
+  color: #d10081; 
+  cursor: pointer;
+  font-family: 'Open Sans;
+  font-size: 12px;
+  text-decoration: underline;
+  padding: 0;
+
+  &:hover {
+    color: #FFFFFF;
+  }
+`;

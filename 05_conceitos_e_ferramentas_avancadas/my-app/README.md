@@ -1,47 +1,35 @@
-# 💻 Tela de Cadastro & Login - Clone da Plataforma DIO
+# 💻 DIO - Projeto Trilha React Developer
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Giovanna-Lanzillotta/dio_formacao_react_developer?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/Giovanna-Lanzillotta/dio_formacao_react_developer?style=for-the-badge)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361dafb)
-![Styled Components](https://img.shields.io/badge/styled--components-%23db7093.svg?style=for-the-badge&logo=styled-components&logoColor=white)
+Este é um projeto desenvolvido durante a formação React Developer da [DIO (Digital Innovation One)](https://www.dio.me/). A aplicação simula a interface da plataforma da DIO, contendo páginas de Home, Cadastro, Login (com autenticação real integrada a uma API mockada) e o Feed de artigos/usuários.
 
-> Desafio prático de desenvolvimento web desenvolvido como parte da **Formação React Developer** na [Digital Innovation One (DIO)](https://www.dio.me/).
-
-O projeto consiste na réplica das interfaces de Login, Cadastro e Feed da plataforma DIO, com foco na criação de componentes dinâmicos, reutilizáveis e estilizados de forma avançada no ecossistema do React.
+O projeto foi totalmente migrado/desenvolvido utilizando **React**, **TypeScript** e **Styled-Components**, aplicando conceitos avançados de Context API para gerenciamento de estado global e React Router DOM para navegação.
 
 ---
 
-## 📸 Demonstração
+## 🚀 Funcionalidades
 
-<p align="center">
-  <img src="./assets/preview-projeto.gif" alt="Demonstração do Projeto" width="100%">
-</p>
-
----
-
-## 🚀 Tecnologias e Conceitos Utilizados
-
-O ecossistema do projeto foi estruturado com ferramentas modernas do ecossistema JavaScript:
-
-* **React.js**: Biblioteca base para a construção de interfaces SPA baseadas em componentes.
-* **React Router DOM (v7)**: Gerenciamento robusto de rotas internas e navegação dinâmica (`useNavigate`).
-* **Styled Components**: Componentização do CSS com escopo isolado, passagem de `props` dinâmicas para o estilo (*variants*) e uso avançado de pseudo-elementos (`::after`, `::before`).
-* **React Hook Form**: Gerenciamento de performance, estado de formulários e captura otimizada de inputs.
-* **Axios**: Integração e requisições HTTP para consumo de API externa.
-* **JSON Server**: Simulação de uma API REST baseada em um arquivo local (`db.json`) para validação de autenticação em tempo real.
-* **React Icons & Google Fonts ('Open Sans')**: Identidade visual oficial da plataforma.
+* **Página Inicial (Home):** Apresentação da plataforma com navegação para login/cadastro.
+* **Cadastro:** Formulário para novos usuários criarem suas contas.
+* **Login com Validação:** Autenticação integrada ao banco de dados via Context API.
+* **Feed:** Listagem de posts, ranking de usuários e progresso de aprendizado do perfil.
+* **Rotas Protegidas/Dinâmicas:** Uso do `useNavigate` e estruturas de roteamento organizadas.
 
 ---
 
-## 🎨 Destaques Técnicos & Arquitetura
+## 🛠️ Tecnologias Utilizadas
 
-* **Consumo Dinâmico de API**: Autenticação simulada ponta a ponta (Frontend ⇆ API Local), validando credenciais de usuários cadastrados diretamente na memória/JSON.
-* **Componentização Avançada**: Separação estruturada de responsabilidades visuais em componentes reutilizáveis como `Container`, `Row`, `Column`, `Wrapper`, `Input` e `Button`.
-* **Botões com Variantes Dinâmicas**: Criação de botões customizáveis (`ButtonContainer`) que alteram comportamento, bordas e cores de forma reativa baseados na prop `variant="primary|secondary"`.
-* **Layout Responsivo**: Uso estratégico de CSS Flexbox e Grid layouts para garantir o alinhamento preciso do cabeçalho, formulários e feed de notícias.
+* [React](https://reactjs.org/) - Biblioteca JavaScript para construção de interfaces.
+* [TypeScript](https://www.typescriptlang.org/) - Tipagem estática para maior segurança no código.
+* [Styled-Components](https://styled-components.com/) - Estilização baseada em componentes (CSS-in-JS).
+* [React Router DOM](https://reactrouter.org/) - Gerenciamento e navegação de rotas.
+* [JSON Server](https://github.com/typicode/json-server) - API falsa (mock) para simular o banco de dados e autenticação de senhas.
 
 ---
 
-## 🛠️ Como Executar o Projeto
+## 🔧 Como Executar o Projeto
 
 Para rodar este projeto localmente, você precisará ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
+
+*npm run api* - Inicia o servidor backend simulado (JSON Server). Ele roda o banco de dados local (db.json) na porta 8001 para que a aplicação consiga fazer o cadastro, login e a validação de usuários.
+
+*npm start* - Inicia o servidor de desenvolvimento do React (Front-end). Ele compila o projeto e abre a aplicação automaticamente no seu navegador no endereço http://localhost:3000 para você visualizar as telas.

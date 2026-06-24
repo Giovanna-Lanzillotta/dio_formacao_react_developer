@@ -30,10 +30,16 @@ export const AuthContextProvider = ({
                 }catch{
                     alert('Houve um erro, tente novamente.')
                 } 
+    };
+
+    const handleSignOut = () => {
+        setUser({} as IUser);
+        navigate('/');
     }
 
+
    return(
-     <AuthContext.Provider value={{user, handleLogin}}>
+     <AuthContext.Provider value={{user, handleLogin, handleSignOut}}>
         {children}
     </AuthContext.Provider>
    );
