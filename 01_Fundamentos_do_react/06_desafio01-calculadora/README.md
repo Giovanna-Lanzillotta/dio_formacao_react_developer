@@ -50,3 +50,5 @@ Este projeto foi desenvolvido como parte do desafio da **Formação React Develo
    ```bash
    npm install
    npm start
+   ```
+ <a href="https://calculadora-react-7zvo.onrender.com/" target="_blank" rel="noopener noreferrer">Teste a calculadora clicando aqui!!!</a>
